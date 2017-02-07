@@ -26,6 +26,7 @@
 
 No implementation exists yet, but there are a few different options:
 
+- Local server that acts as a UDP proxy to the browser
 - Chrome App: these provide [a UDP API](https://developer.chrome.com/apps/sockets_udp)
   - Google has [decided to nix Chrome Apps](https://blog.chromium.org/2016/08/from-chrome-apps-to-web.html)
 - [Beaker Browser](https://github.com/beakerbrowser/beaker): integrate natively
