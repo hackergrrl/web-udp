@@ -1,6 +1,8 @@
 # Web UDP
 > Experiment for a web standard for creating and using UDP sockets in the browser.
 
+*(More coming soon!)*
+
 ## What?
 
 - a low level browser api granting access to UDP sockets
