@@ -22,3 +22,16 @@
 - xor /w random nonce to scramble payload, to prevent web-udp sites from being
   attacking non-web-udp services /wo explicitly supporting web-udp
 
+## Implementation Vectors
+
+No implementation exists yet, but there are a few different options:
+
+- Chrome App: these provide [a UDP API](https://developer.chrome.com/apps/sockets_udp)
+  - Google has [decided to nix Chrome Apps](https://blog.chromium.org/2016/08/from-chrome-apps-to-web.html)
+- [Beaker Browser](https://github.com/beakerbrowser/beaker): integrate natively
+- Fork Chromium and write an implementation
+
+## Collaborate
+
+Are you excited about seeing low-level UDP in the browser? File an issue! Send a
+PR! Get in contact with [@noffle](https://twitter.com/noffle)!
