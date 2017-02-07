@@ -9,13 +9,25 @@
 
 ## Why?
 
-- webrtc is too heavy on resources
-  - can open very few connections /wo overloading machine
-- webrtc is too heavy on implementation
-  - lack of non-chrome / non-ff implementations due to complexity
-  - too heavy to easily talk to embedded machines
-- these result in webrtc being ineffective for many interesting and exciting
-  applications (peer-to-peer apps; bittorrent; real-time games)
+WebRTC is very heavy on resources: most modern machines cannot open more than a
+dozen connections without slowing their entire system to a crawl. Contrast this
+to plain UDP sockets, which a modern machine can easily have many many thousands
+of at once at very little resource cost.
+
+WebRTC is a very heavy specification. This means a complex implementation, which
+only makes the creation of an implementation available to companies/interests
+with a great deal of resources. A simpler implementation allows other vendors
+and implementations for other languages to come into the table.
+
+These result in webrtc being ineffective for many interesting and exciting
+applications like peer-to-peer apps and real-time games.
+
+Having a simple low level layer, folks can layer non-browser-specific modules on
+top. It also means less heavy dependency on browser vendors for support, dev,
+features, etc. The community can develop out what it wants. This is *so*
+powerful.
+
+(NOTE: mention DHTs: https://github.com/feross/webtorrent/issues/288)
 
 ## How?
 
