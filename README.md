@@ -5,7 +5,7 @@
 
 ## What?
 
-- a low level browser api granting access to UDP sockets
+- a low level browser api granting access to UDP sockets for the purpose of peer-to-peer communications with low overhead
 
 ## Why?
 
@@ -43,6 +43,10 @@ No implementation exists yet, but there are a few different options:
   - Google has [decided to nix Chrome Apps](https://blog.chromium.org/2016/08/from-chrome-apps-to-web.html)
 - [Beaker Browser](https://github.com/beakerbrowser/beaker): integrate natively
 - Fork Chromium and write an implementation
+
+## Other Efforts
+
+https://github.com/Maksims/web-udp-public/ is looking very promising, but it is intended as a web standard for server-client UDP, not for peer-to-peer applications.
 
 ## Collaborate
 
