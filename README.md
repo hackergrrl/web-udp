@@ -46,6 +46,8 @@ No implementation exists yet, but there are a few different options:
 
 ## Other Efforts
 
+**netcode.io** now includes browser support https://github.com/RedpointGames/netcode.io-browser
+
 https://github.com/Maksims/web-udp-public/ is looking very promising, but it is intended as a web standard for server-client UDP, not for peer-to-peer applications.
 
 ## Collaborate
