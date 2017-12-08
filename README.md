@@ -78,6 +78,8 @@ result much more difficult to understand and hack on.
 
 ## Other Efforts
 
+**netcode.io** now includes browser support https://github.com/RedpointGames/netcode.io-browser
+
 https://github.com/Maksims/web-udp-public/ is looking very promising, but it is intended as a web standard for server-client UDP, not for peer-to-peer applications.
 
 ## Collaborate
