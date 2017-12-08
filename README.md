@@ -44,6 +44,38 @@ No implementation exists yet, but there are a few different options:
 - [Beaker Browser](https://github.com/beakerbrowser/beaker): integrate natively
 - Fork Chromium and write an implementation
 
+## Concerns & Solutions
+
+> 1. Websites would be able to launch DDoS attacks by coordinating UDP packet
+>    floods from browsers.
+
+*Q: What keeps Websockets from being abused in this way?*
+
+Maybe sent packets are rate-limited by the browser until a response is received
+from the destination? Denial of service would be infeasible against a
+non-responsive machine.
+
+> 2. New security holes would be created as JavaScript running in web pages
+>    could craft malicious UDP packets to probe the internals of corporate
+>    networks and report back over HTTPS.
+
+Scrambling UDP packets using an XOR key would make it so only web-udp-aware apps
+would be able to interpret data the browser sends.
+
+> 3. UDP packets are not encrypted, so any data sent over these packets could be
+>    sniffed and read by an attacker, or even modified in transmit. It would be
+>    a massive step back for web security to create a new way for browsers to
+>    send unencrypted packets.
+
+We could either
+
+1. Build in encryption
+2. Leave it to userspace solutions to wrap web-udp in various security layers
+
+I prefer #2, since it reduces the surface area of what web-udp does. WebRTC
+tried to add many layers of complexity all baked in together, which has made the
+result much more difficult to understand and hack on.
+
 ## Other Efforts
 
 https://github.com/Maksims/web-udp-public/ is looking very promising, but it is intended as a web standard for server-client UDP, not for peer-to-peer applications.
