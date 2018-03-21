@@ -31,8 +31,11 @@ powerful.
 
 ## How?
 
-- xor /w random nonce to scramble payload, to prevent web-udp sites from being
-  attacking non-web-udp services /wo explicitly supporting web-udp
+- XORing data with separate send/recv random nonces to scramble payload, to
+  prevent web-udp sites from being attacking non-web-udp services /wo explicitly
+  supporting web-udp.
+- rate limited sending of packets until a web-udp compatible response is
+  received from the endpoint, to prevent browers from DOS'ing endpoints.
 
 ## Implementation Vectors
 
